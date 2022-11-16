@@ -1,0 +1,27 @@
+.tasklist{
+    width: 80vw;  
+    background-image: url("https://previews.123rf.com/images/mangpor2004/mangpor20041605/mangpor2004160500099/56383918-to-do-list-background-template.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.searchbuttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchall{
+  background-color: lightskyblue;
+}
+.searchdone{
+    background-color: limegreen;
+    
+  }
+  .searchundone{
+    background-color: red;
+
+  }
+  .searchdone, .searchundone{
+    border-radius: 8px;
+    margin-inline: 10px;
+    margin-bottom: 5px;
+  }

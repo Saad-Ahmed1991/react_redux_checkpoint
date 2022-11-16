@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+.app{
+  width: 90vw;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+body{
+  background:rgb(226, 227, 227);
+  background-image: url("https://i.stack.imgur.com/jGlzr.png");
+}
+.heading {
+  overflow: visible;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bolder;
+  font-size: 5em;
+  transform: translateX(-1500px);
+  animation: slide_in 5s ease-in-out  forwards ;
+} 
+
+
+.task{
+  padding: 0.5em;
+}
+.btn_delete, .btn_edit{
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  margin-right: 2em;
+}
+.btn_delete{
+  color:red;
+
+}
+.btn_delete:hover, .btn_edit:hover{
+  scale: 1.2;
+}
+
+.task_para{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.para{
+  width: 8em;
+  font-weight: bold;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.done, .undone{
+  border: none;
+  background: transparent;
+  color: limegreen;
+  font-weight: bold;
+  width: 80px;
+}
+.done:hover , .undone:hover{
+    scale: 1.2;
+  }
+
+.done {
+  color: limegreen;
+}
+.undone{
+  color: red;
+}
+.edit{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 2em;
+}
+.edit_page_label{
+font-size: 2em;
+font-weight: bold;
+margin-top: 1.5em;
+}
+
+.edit_page_input{
+  width: 50vw;
+  margin-block: 1em;
+}
+.edit_page_btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: rgb(0, 0, 0);
+  margin-block: 2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-inline: 2em;
+  padding-block: 0.3em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-image: linear-gradient(45deg,#64f907,#c8d65d,#ffd16f,#753e0d,#5e521b,#c8d65d,#b8d416,#5d511f);
+  background-size: 300%;
+  animation: btn_animation 5s infinite alternate;
+}
+
+@keyframes slide_in {
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes btn_animation {
+  0%{
+      background-position: left;
+  }
+  100%{
+      background-position: right;
+  }
+}
