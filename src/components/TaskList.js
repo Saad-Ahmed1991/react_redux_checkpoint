@@ -19,15 +19,34 @@ const TaskList = () => {
           Undone Tasks
         </button>
       </div>
-      {show === "all"
-        ? newList.map((el) => <TaskItem key={el.id} el={el} />)
-        : show === "done"
-        ? newList
-            .filter((el) => el.done)
-            .map((el) => <TaskItem key={el.id} el={el} />)
-        : newList
-            .filter((el) => !el.done)
-            .map((el) => <TaskItem key={el.id} el={el} />)}
+      <ul>
+        <li className="list_head">
+          <label className="desc">Descriptions</label>
+          <label className="username">Usernames</label>
+          <label className="settings">Settings</label>
+        </li>
+        {show === "all"
+          ? newList.map((el) => (
+              <li>
+                <TaskItem key={el.id} el={el} />
+              </li>
+            ))
+          : show === "done"
+          ? newList
+              .filter((el) => el.done)
+              .map((el) => (
+                <li>
+                  <TaskItem key={el.id} el={el} />
+                </li>
+              ))
+          : newList
+              .filter((el) => !el.done)
+              .map((el) => (
+                <li>
+                  <TaskItem key={el.id} el={el} />
+                </li>
+              ))}
+      </ul>
     </div>
   );
 };

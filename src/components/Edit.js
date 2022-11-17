@@ -18,7 +18,7 @@ const Edit = () => {
   };
   return (
     <div className="edit">
-      <h1>Edit task {obj.id}</h1>
+      <h1 className="edit_heading">Edit task {obj.id}</h1>
       <label className="edit_page_label">New Discription:</label>
       <input
         className="edit_page_input"
